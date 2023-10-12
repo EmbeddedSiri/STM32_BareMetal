@@ -1,0 +1,36 @@
+!SESSION 2023-10-08 13:09:05.862 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-10-08 13:09:24.483
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-10-08 13:09:24.593
+!MESSAGE Log4j initialized with config file C:\Users\SHRIKANT\Desktop\MY_STM32\STM32_BareMetal\GPIO_Driver\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-10-08 13:09:29.463
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-08 13:23:49.227
+!MESSAGE Indexed 'GPIO_Driver' (3 sources, 53 headers) in 2.13 sec: 1,949 declarations; 2,811 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-10-11 17:06:20.808
+!MESSAGE Indexed 'GPIO_Driver' (4 sources, 55 headers) in 0.266 sec: 2,063 declarations; 3,138 references; 0 unresolved inclusions; 2 syntax errors; 2 unresolved names (0.038%)
+!SESSION 2023-10-12 13:10:10.375 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-10-12 13:10:49.073
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-10-12 13:10:49.213
+!MESSAGE Log4j initialized with config file C:\Users\SHRIKANT\Desktop\MY_STM32\STM32_BareMetal\GPIO_Driver\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-10-12 13:10:58.167
+!MESSAGE Started RMI Server, listening on port 41337

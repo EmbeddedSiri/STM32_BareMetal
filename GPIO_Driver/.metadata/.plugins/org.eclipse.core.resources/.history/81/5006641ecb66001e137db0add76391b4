@@ -1,0 +1,62 @@
+/*
+ * stm32f407_gpio_driver.h
+ *
+ *  Created on: Oct 9, 2023
+ *      Author: SHRIKANT
+ */
+
+#ifndef INC_STM32F407_GPIO_DRIVER_H_
+#define INC_STM32F407_GPIO_DRIVER_H_
+
+#include "stm32f407.h"
+
+/*
+ * Configuration structure for gpio pin
+ */
+
+typedef struct {
+	uint8_t GPIO_PinNumber;
+	uint8_t GPIO_PinMode;
+	uint8_t GPIO_PinSpeed;
+	uint8_t GPIO_PinPuPdControl;
+	uint8_t GPIO_PinOPType;
+	uint8_t GPIO_PinAltFunMode;
+}GPIO_PinConfig_t;
+
+
+/*
+ * Handle for gpio pin
+ */
+
+typedef struct {
+	GPIO_RegDef_t *pGPIOx;  //Holds the addr of GPIO port to which the gpio pin belongs
+	GPIO_PinConfig_t GPIO_Config; //Holds pin configuration settings
+}GPIO_Handle_t;
+
+
+
+/**********************************************************************************************
+ ******************************** GPIO Driver API's *****************************************
+ **********************************************************************************************/
+
+// Peripheral Clock setup
+void GPIO_PeriClockControl(GPIO_RegDef_t *pGPIOx, uint8_t en_di);
+
+
+// Init and De-Init
+void GPIO_Init(GPIO_Handle_t *pGPIOHandle);
+void GPIO_DeInit(GPIO_RegDef_t *pGPIOx);
+
+// Data Read and Write
+uint8_t GPIO_ReadFromInputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber);
+uint16_t GPIO_ReadFromInputPort(GPIO_RegDef_t *pGPIOx);
+void GPIO_WriteToOutputPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber, uint8_t Value);
+void GPIO_WriteToOutputPort(GPIO_RegDef_t *pGPIOx, uint16_t Value);
+void GPIO_ToggleOutPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber);
+
+// IRQ Configuration and ISR handling
+void GPIO_IRQConfig(void);
+void GPIO_IRQHandling(void);
+
+
+#endif /* INC_STM32F407_GPIO_DRIVER_H_ */
