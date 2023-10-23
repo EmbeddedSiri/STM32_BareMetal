@@ -1,8 +1,0 @@
-/*
- * stm32f407_gpio_driver.c
- *
- *  Created on: Oct 9, 2023
- *      Author: SHRIKANT
- */
-
-#include "stm32f407_gpio_driver.h"

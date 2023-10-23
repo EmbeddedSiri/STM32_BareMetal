@@ -13,7 +13,7 @@
  */
 
 typedef struct {
-	uint8_t GPIO_PinNumber;  				/* Stores the pin number  */
+	uint16_t GPIO_PinNumber;  				/* Stores the pin number  */
 	uint8_t GPIO_PinMode;					/* Stores the pin mode - @GPIO pin possible mode */
 	uint8_t GPIO_PinSpeed;					/* Stores the output speed - @GPIO pin possible mode  */
 	uint8_t GPIO_PinPuPdControl;			/* Stores the - @GPIO pin pull up and pull down configuration  */
@@ -37,22 +37,22 @@ typedef struct {
  * GPIO pin Numbers
  */
 
-#define GPIO_PIN_NO_0				0
-#define GPIO_PIN_NO_1				1
-#define GPIO_PIN_NO_2				2
-#define GPIO_PIN_NO_3				3
-#define GPIO_PIN_NO_4				4
-#define GPIO_PIN_NO_5				5
-#define GPIO_PIN_NO_6				6
-#define GPIO_PIN_NO_7				7
-#define GPIO_PIN_NO_8				8
-#define GPIO_PIN_NO_9				9
-#define GPIO_PIN_NO_10				10
-#define GPIO_PIN_NO_11				11
-#define GPIO_PIN_NO_12				12
-#define GPIO_PIN_NO_13				13
-#define GPIO_PIN_NO_14				14
-#define GPIO_PIN_NO_15				15
+#define GPIO_PIN_NO_0				((uint16_t)0x0001)
+#define GPIO_PIN_NO_1				((uint16_t)0x0002)
+#define GPIO_PIN_NO_2				((uint16_t)0x0004)
+#define GPIO_PIN_NO_3				((uint16_t)0x0008)
+#define GPIO_PIN_NO_4				((uint16_t)0x0010)
+#define GPIO_PIN_NO_5				((uint16_t)0x0020)
+#define GPIO_PIN_NO_6				((uint16_t)0x0040)
+#define GPIO_PIN_NO_7				((uint16_t)0x0080)
+#define GPIO_PIN_NO_8				((uint16_t)0x0100)
+#define GPIO_PIN_NO_9				((uint16_t)0x0200)
+#define GPIO_PIN_NO_10				((uint16_t)0x0400)
+#define GPIO_PIN_NO_11				((uint16_t)0x0800)
+#define GPIO_PIN_NO_12				((uint16_t)0x1000)
+#define GPIO_PIN_NO_13				((uint16_t)0x2000)
+#define GPIO_PIN_NO_14				((uint16_t)0x4000)
+#define GPIO_PIN_NO_15				((uint16_t)0x8000)
 
 
 /*
@@ -114,13 +114,11 @@ typedef struct {
  *--------------------------Data Read and Write-----------------------------*
  *--------------------------------------------------------------------------*/
 
-	uint8_t GPIO_ReadFromInputPin(GPIO_Registers_t *pGPIOx, uint8_t PinNumber);
-	uint16_t GPIO_ReadFromInputPort(GPIO_Registers_t *pGPIOx);
+	uint8_t GPIO_ReadFromInputPin(GPIO_Registers_t *pGPIOx, uint16_t PinNumber);
 
-	void GPIO_WriteToOutputPin(GPIO_Registers_t *pGPIOx, uint8_t PinNumber, uint8_t Value);
-	void GPIO_WriteToOutputPort(GPIO_Registers_t *pGPIOx, uint16_t Value);
+	void GPIO_WriteToOutputPin(GPIO_Registers_t *pGPIOx, uint16_t PinNumber, uint8_t Set_Reset);
 
-	void GPIO_ToggleOutPin(GPIO_Registers_t *pGPIOx, uint8_t PinNumber);
+	void GPIO_ToggleOutPin(GPIO_Registers_t *pGPIOx, uint16_t PinNumber);
 
 
 #endif /* INC_STM32F407_GPIO_DRIVER_H_ */
