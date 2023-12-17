@@ -18,7 +18,7 @@
 #define SRAM1_BASEADDR				0x20000000UL
 #define SRAM2_BASEADDR				0x20001C00UL
 #define ROM_BASEADDR				0x1FFF0000UL
-#define SRAM						SRAM1_BASEADDR
+#define SRAM					SRAM1_BASEADDR
 
 
 /*
@@ -45,7 +45,7 @@
 #define GPIOH_BASEADDR				(AHB1_BASEADDR + 0x1C00UL)
 #define GPIOI_BASEADDR				(AHB1_BASEADDR + 0x2000UL)
 
-#define RCC_BASEADDR                (AHB1_BASEADDR + 0x3800UL)
+#define RCC_BASEADDR                		(AHB1_BASEADDR + 0x3800UL)
 
 /*
  * GPIO Peripheral Ragisters Defination Structure
@@ -119,7 +119,7 @@ typedef struct {
 #define GPIOH 						((GPIO_Registers_t*)GPIOH_BASEADDR)
 #define GPIOI 						((GPIO_Registers_t*)GPIOI_BASEADDR)
 
-#define RCC							((RCC_Registers_t*)RCC_BASEADDR)
+#define RCC						((RCC_Registers_t*)RCC_BASEADDR)
 
 /*
  * Clock Enable Macros for GPIO Peripherals
@@ -171,10 +171,10 @@ typedef struct {
 
 #define ENABLE					1
 #define DISABLE					0
-#define SET						ENABLE
+#define SET					ENABLE
 #define RESET					DISABLE
-#define GPIO_PIN_SET			SET
-#define GPIO_PIN_RESET			RESET
+#define GPIO_PIN_SET				SET
+#define GPIO_PIN_RESET				RESET
 
 
 
